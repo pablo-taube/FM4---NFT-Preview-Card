@@ -82,11 +82,25 @@ main {
     align-items: center;
     flex-wrap: wrap;}
 
+.card-bg {
+    position: relative;
+    overflow: hidden;}
+
 .card-bg img {
     width: 100%;
     height: 100%;
-    background-image: url(../images/image-equilibrium.jpg);
     border-radius: 10px;}
+
+.bg-hover {
+    display: none;
+        position: absolute;
+        top: 0;
+        left: 0;}
+
+/* .bg-hover:hover img {
+    width: 10px;
+    height: 10px;
+} */
 
 .description {
     width: 100%;
@@ -110,6 +124,9 @@ main {
 .time {
     justify-content: right;}
 
+.eth img, .time img {   
+    padding-right: 0.5em;
+}
 hr {
     width: 100%;
     background-color: hsl(215, 32%, 27%);
@@ -134,17 +151,20 @@ hr {
 
 /* Effects */
 
-.card-bg img:hover {
-    background-image: url('../images/icon-view.svg') no-repeat;
+.card-bg:hover .bg-hover {
+    display: inline;
     background-color: hsl(178, 100%, 50%);
-    transition: ease 0.3s;}
-    /* opacity: 0;} */
+    transition: ease 0.3s;
+    opacity: 0.5;}
+
+.card-bg .bg-hover img{
+    width: 10px;
+    height: 10px;
+}
 
 h1:hover, .name:hover {
     color: hsl(178, 100%, 50%);
-    transition: ease 0.3s;
-    /* opacity: 0.5; */
-}
+    transition: ease 0.3s;}
 
 
 /* ###Footer */
